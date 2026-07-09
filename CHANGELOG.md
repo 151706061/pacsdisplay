@@ -1,6 +1,6 @@
 # Comprehensive Changelog - pacsDisplay Project
 
-All notable changes to the pacsDisplay project are documented in this file, organized chronologically from newest to oldest. This comprehensive version includes all historical information extracted from source files, INSTRUCTIONS files, and devnotes.
+All notable changes to the pacsDisplay project are documented in this file, organized chronologically from newest to oldest. This comprehensive version includes all historical information extracted from source files, INSTRUCTIONS files, devnotes, and memory.
 
 ---
 
@@ -33,7 +33,7 @@ All notable changes to the pacsDisplay project are documented in this file, orga
 - Used logging flag in config to enable/disable logging to enable running in read-only environements
 
 **lutGenerate 2.6**
-- Moved to starkit distribution
+- Updated to starkit version
 - Rearranged vfs to match other apps
 - Reverted to Help_message (from PDF help)
 - Displays total DICOM GSDF JNDs based on L'max and L'min values
@@ -229,7 +229,7 @@ All notable changes to the pacsDisplay project are documented in this file, orga
 **QC-check** (lumResponse utility)
 - Updated to have user input QC type
 - Allows re-analysis of cLR files with different Lamb values
-- Supports modes: 256, 52, 18, 16
+- Supports modes: 256, 52, 18, 16 (adding support for TG270 modes)
 
 ---
 
@@ -701,7 +701,7 @@ All notable changes to the pacsDisplay project are documented in this file, orga
 - **2008**: Added LXcan USB photometer support
 - **2011**: Added i1Display2 USB colorimeter support
 - **2013**: Added X-Rite i1Display Pro support (became recommended device)
-- **2019**: Removed IL1700 and LXcan support (obsolete hardware)
+- **2019**: Removed IL1700 and LXcan support (obsolete hardware/dependencies, remove Expect dependencies for W10 migration)
 - **2019-present**: i1Display Pro and variants only (including rebranded versions)
 
 ### Software Architecture Evolution
@@ -791,18 +791,18 @@ All notable changes to the pacsDisplay project are documented in this file, orga
 - **Michael J. Flynn** - Original author, Henry Ford Health Systems
   - X-ray Imaging Lab, Henry Ford Health
   - Nuclear Engineering and Radiological Sciences, University of Michigan
-  - Primary developer: 1999-2014
+  - Lead developer: 1999-2014
   - Continued contributions: 2014-2019
 
 - **Philip M. Tchou** - Co-developer
   - X-ray Imaging Lab, Henry Ford Health Systems
-  - Contributions: 2003-2014
+  - Contributions: 2003-2012
 
 - **Nicholas B. Bevins** - Lead developer (recent versions)
   - Imaging Physics, MaineHealth Maine Medical Center - Portland, ME
+  - Contributing developer: 2014-2019
   - Lead developer: 2019-present
-  - Major contributions: Windows 10 compatibility, starkit migration, external measurements
-  - ambtest, uniLum tools
+  - Major contributions: Windows 10 compatibility, starkit migration, external measurements, ambtest, uniLum tools
   - TG270 integrations
   - github and pacsdisplay.org management
   - pdweb tools
@@ -810,7 +810,8 @@ All notable changes to the pacsDisplay project are documented in this file, orga
 ### Institutional Affiliations
 - X-ray Imaging Research Laboratory, Henry Ford Health (formerly Henry Ford Health Systems)
 - Nuclear Engineering and Radiological Sciences, University of Michigan
-- Imaging Physics, MaineHealth Maine Medical Center
+- Imaging Physics, Henry Ford Health
+- Imaging Physics and Radiation Safety, MaineHealth Maine Medical Center
 
 ### Copyright
 Copyright: Xray Imaging Research Laboratory, Henry Ford Health, Detroit, Michigan
@@ -850,16 +851,16 @@ Copyright: Xray Imaging Research Laboratory, Henry Ford Health, Detroit, Michiga
 - Required Tcl/Tk installation
 - Manual dependency management
 
-### Wrapped Versions (2006-2019)
+### Wrapped Versions (2006-2025)
 - TclApp wrapped starpacks
 - All dependencies bundled
 - Single executable per application
 
-### Starkit Distribution (2019-2026)
+### Starkit Distribution (2026-present)
 - Separate runtime (basekit.exe)
 - Shared library directory (LIB/)
 - Smaller per-application size
-- Easier updates and maintenance
+- Streamlined updates and maintenance
 
 ### Current Distribution (2026)
 - Starkit .kit files
@@ -882,9 +883,7 @@ Copyright: Xray Imaging Research Laboratory, Henry Ford Health, Detroit, Michiga
 - Integrated help dialogs
 
 ### 2013-2019
-- HTML help with embedded images
-- Online documentation links
-- Comprehensive INSTRUCTIONS files
+- PDF help with combined PDF documentation based on txt files.
 
 ### 2019-2026
 - Return to text-based help (better maintainability)
@@ -900,5 +899,6 @@ Copyright: Xray Imaging Research Laboratory, Henry Ford Health, Detroit, Michiga
 - *Version history embedded in code*
 - *Git commit history (where available)*
 - *Development notes and release documentation*
+- *Developer memory*
 
-*Last updated: March 2026*
+*Last updated: July 2026*
